@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Calculate the fewest number of operations needed to result in exactly n H characters.
+    Calculates the fewest number of operations needed to result in exactly n H characters in the file.
 
     Args:
         n (int): The target number of H characters.
@@ -9,9 +9,9 @@
         int: The minimum number of operations needed to achieve the target, or 0 if impossible.
 """
 
-def min_operations(n):
-    
-    # Check if n is less than or equal to 1, in which case it's impossible.
+def minOperations(n):
+
+# Check if n is less than or equal to 1, in which case it's impossible.
     if n <= 1:
         return 0
 
@@ -26,11 +26,12 @@ def min_operations(n):
         if n % current == 0:
             clipboard = current
             operations += 2  # Copy All and Paste
-            current += clipboard
+            current *= 2
         else:
-            # If n is not divisible, increment current by 1.
+            # If n is not divisible, perform a Paste operation with the current clipboard.
+            clipboard += current
             operations += 1  # Paste
-            current += 1
+            current += clipboard
 
     # Return the total number of operations.
     return operations
@@ -39,7 +40,8 @@ def min_operations(n):
 if __name__ == "__main__":
     # Example usage and output.
     n = 4
-    print("Min # of operations to reach {} char: {}".format(n, min_operations(n)))
+    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
 
     n = 12
-    print("Min # of operations to reach {} char: {}".format(n, min_operations(n)))
+    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+    
