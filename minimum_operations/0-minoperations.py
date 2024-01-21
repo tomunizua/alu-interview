@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-def min_operations(n):
-    """
+"""
     Calculate the fewest number of operations needed to result in exactly n H characters.
 
     Args:
@@ -9,6 +8,9 @@ def min_operations(n):
     Returns:
         int: The minimum number of operations needed to achieve the target, or 0 if impossible.
     """
+
+def min_operations(n):
+    
     # Check if n is less than or equal to 1, in which case it's impossible.
     if n <= 1:
         return 0
