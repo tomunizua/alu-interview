@@ -7,7 +7,7 @@
 
     Returns:
         int: The minimum number of operations needed to achieve the target, or 0 if impossible.
-    """
+"""
 
 def min_operations(n):
     
