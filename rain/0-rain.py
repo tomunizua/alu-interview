@@ -2,6 +2,7 @@
 ''' Module to calculate retained rainwater in relief map cross-section.
 '''
 
+
 from typing import List
 
 def rain(walls: List[int]) -> int:
