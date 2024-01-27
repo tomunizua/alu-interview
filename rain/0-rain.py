@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 '''
 Module to calculate retained rainwater in relief map cross-section.
 '''
@@ -20,6 +19,7 @@ def rain(walls: List[int]) -> int:
         Ends of the list (before index 0 and after index walls[-1]) do not retain water.
         Returns 0 if the list is empty.
     '''
+    
     if not walls:
         return 0
 
@@ -40,4 +40,3 @@ def rain(walls: List[int]) -> int:
         total_water += min(left_max[i], right_max[i]) - walls[i]
 
     return total_water
-
