@@ -1,25 +1,12 @@
 #!/usr/bin/python3
-'''
-Module to calculate retained rainwater in relief map cross-section.
+''' Module to calculate retained rainwater in relief map cross-section.
 '''
 
 from typing import List
 
 def rain(walls: List[int]) -> int:
+    ''' Calculate total retained rainwater given wall heights
     '''
-    Calculate total retained rainwater given wall heights.
-
-    Args:
-        walls (List[int]): Non-negative integers representing wall heights.
-
-    Returns:
-        int: Total retained rainwater.
-
-    Note:
-        Ends of the list (before index 0 and after index walls[-1]) do not retain water.
-        Returns 0 if the list is empty.
-    '''
-    
     if not walls:
         return 0
 
